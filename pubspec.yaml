@@ -32,7 +32,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  carousel_slider: ^4.0.0
+  cached_network_image: ^3.0.0
+  flutter_rating_stars: ^1.0.3+4
+  favorite_button: ^0.0.4
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -45,9 +48,19 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+
+    - assets/
+    - assets/images/
+    - assets/images/drawer-header.jpg
+    - assets/images/banner-1.png
+    - assets/images/banner-2.png
+    - assets/images/ic_chair1.png
+    - assets/images/ic_chair2.png
+    - assets/images/ic_chair.png
+    - assets/images/ic_chair4.png
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
