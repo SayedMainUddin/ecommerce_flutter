@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-
+import 'dart:convert';
+import 'dart:io';
 
 //import 'CheckOutPage.dart';
 
 class CartPage extends StatefulWidget {
+  CartPage({Key? key,}) : super(key: key);
   @override
   _CartPageState createState() => _CartPageState();
 }
@@ -11,17 +13,29 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.grey.shade100,
-      body: Builder(
-        builder: (context) {
-          return ListView(
-            children: <Widget>[createHeader(), createSubTitle(), createCartList(), footer(context)],
-          );
-        },
-      ),
-    );
+    return WillPopScope(
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: Scaffold(
+            resizeToAvoidBottomInset: false,
+            backgroundColor: Colors.grey.shade100,
+            body: Builder(
+              builder: (context) {
+                return ListView(
+                  children: <Widget>[
+                    createHeader(),
+                    createSubTitle(),
+                    createCartList(),
+                    footer(context)],
+                );
+              },
+            ),
+          ),
+        ),
+        onWillPop: () async {
+      Navigator.pop(context);
+      return true;
+    });
   }
 
   footer(BuildContext context) {

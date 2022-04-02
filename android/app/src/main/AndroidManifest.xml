@@ -1,8 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
     package="com.example.ecommerce_flutter">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <!-- Provide required visibility configuration for API level 30 and above -->
+
    <application
+
         android:label="ecommerce_flutter"
         android:icon="@mipmap/ic_launcher">
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -17,7 +24,9 @@
             <meta-data
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
+
               />
+
             <!-- Displays an Android View that continues showing the launch screen
                  Drawable until Flutter paints its first frame, then this splash
                  screen fades out. A splash screen is useful to avoid any visual
@@ -26,7 +35,9 @@
             <meta-data
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
               android:resource="@drawable/launch_background"
+
               />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -37,5 +48,12 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+       <meta-data
+           android:name="com.facebook.sdk.ApplicationId"
+           android:value="@string/facebook_app_id" />
+       <provider
+           android:name="com.facebook.FacebookContentProvider"
+           android:authorities="com.facebook.app.FacebookContentProvider[facebook_app_id]"
+           android:exported="false" />
     </application>
 </manifest>
