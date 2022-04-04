@@ -34,11 +34,11 @@ class StoreCategory {
 List<StoreCategory> storeCategoryList=[
   StoreCategory(
     id: 1,
-    name: 'Hotel and Restorunt'
+    name: 'IT support'
   ),
   StoreCategory(
       id: 2,
-      name: 'Grocery'
+      name: 'It Support'
   ),
   StoreCategory(
       id: 3,
@@ -72,9 +72,8 @@ List<StoreCategory> storeCategoryList=[
 List<Store> storeList = [
   Store(
     id: 1,
-    name: 'Sayed Main Uddin',
-      imageUrl: 'https://cdn-colla.nitrocdn.com/aGOFLQWREmkPcEuaJpGePQetRgHRrvYU/assets/static/optimized/rev-be63c5d/wp-content/uploads/2018/08/on-demand-home-services-main.jpg',
-
+    name: 'Alchemy Software Limited',
+      imageUrl: 'assets/Twilio-SMS-Bot.jpg',
       //imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fdokument.pub%2Fdl%2Fjumon-company-profile-flipbook-pdf&psig=AOvVaw0kVlHh4d80DvEtSy0yPf3F&ust=1647340980160000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjZ8ca1xfYCFQAAAAAdAAAAABAD',
  category: storeCategoryList[0].name,
   location: 'Chattogram Bangladesh',
@@ -84,19 +83,19 @@ List<Store> storeList = [
 
   Store(
       id: 2,
-      name: 'Love of wisedom',
-      imageUrl: 'https://cdn-colla.nitrocdn.com/aGOFLQWREmkPcEuaJpGePQetRgHRrvYU/assets/static/optimized/rev-be63c5d/wp-content/uploads/2018/08/on-demand-home-services-main.jpg',
+      name: 'Main Bhai It support',
+      imageUrl: 'assets/programingName/chat-app.jpg',
 
       // imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.worldorgs.com%2Fcatalog%2Fbhadesar%2Fbeauty-salon%2Fhair-dot-com-spa-and-family-seloon&psig=AOvVaw0kkw9kUzKQo0cQQ9P9m_oW&ust=1647341582064000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPDc8eW3xfYCFQAAAAAdAAAAABAD',
       category: storeCategoryList[1].name,
-      location: 'Bohoddar Hat',
+      location: 'Noakhali Bangladesh',
       totalFollowers: 10,
       totalProducts: 5,
       isFollow: false),
   Store(
       id: 3,
-      name: 'Israq Night Club',
-      imageUrl: 'https://cdn-colla.nitrocdn.com/aGOFLQWREmkPcEuaJpGePQetRgHRrvYU/assets/static/optimized/rev-be63c5d/wp-content/uploads/2018/08/on-demand-home-services-main.jpg',
+      name: 'Israq Fiverr support',
+      imageUrl: 'assets/programingName/csharp.jpg',
 
       //imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.collinsdictionary.com%2Fdictionary%2Fenglish%2Fnightclub&psig=AOvVaw2S3VE9I5Aa2n66Tf3-kJ1l&ust=1647341642073000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIib0YS4xfYCFQAAAAAdAAAAABAD',
       category: storeCategoryList[3].name,
@@ -104,14 +103,21 @@ List<Store> storeList = [
       totalFollowers: 10,
       totalProducts: 5,
       isFollow: true),
-  Store(
-      id: 4,
-      name: 'Diviya Home Service',
-      imageUrl: 'https://cdn-colla.nitrocdn.com/aGOFLQWREmkPcEuaJpGePQetRgHRrvYU/assets/static/optimized/rev-be63c5d/wp-content/uploads/2018/08/on-demand-home-services-main.jpg',
-      category: storeCategoryList[4].name,
-      location: 'USA',
-      totalFollowers: 10,
-      totalProducts: 5,
-      isFollow: true),
-
+  Store(      id: 4,       name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 5,       name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 6,       name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 7,       name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 8,       name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 9,       name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 10,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 11,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 12,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 13,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 14,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 15,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 16,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 17,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 18,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 19,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
+  Store(      id: 20,      name: 'Sakib Enterprise',      imageUrl: 'assets/programingName/flutter.png',      category: storeCategoryList[4].name,      location: 'Bohoddar hat',      totalFollowers: 10,      totalProducts: 5,      isFollow: true),
 ];

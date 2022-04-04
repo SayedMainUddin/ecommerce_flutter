@@ -5,13 +5,13 @@ import 'package:ecommerce_flutter/Profile/store_profile.dart';
 import 'package:ecommerce_flutter/Profile/user_profile.dart';
 import 'package:ecommerce_flutter/Screens/brows.dart';
 import 'package:ecommerce_flutter/Store/create_store.dart';
-import 'package:ecommerce_flutter/allCategory.dart';
+import 'package:ecommerce_flutter/Screens/favourites_items.dart';
 import 'package:ecommerce_flutter/cart/cart_in_memory_repository.dart';
 import 'package:ecommerce_flutter/cart/order_history.dart';
-import 'package:ecommerce_flutter/product_detail.dart';
+
 import 'package:ecommerce_flutter/utils/bottomNavBarDesign.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce_flutter/categorise.dart';
+
 import 'dart:ui';
 import 'package:ecommerce_flutter/utils/favourite_button.dart';
 
@@ -137,7 +137,7 @@ if(widget.pageIndex==0 || widget.pageIndex==null){
           ),
         ],
         currentIndex: _pageIndex,
-        selectedItemColor: Color(0xFF19818E),
+        selectedItemColor: Color(0xF80687F6),
         unselectedItemColor: Colors.grey,
         onTap: (index) {
           onTabTapped(index);

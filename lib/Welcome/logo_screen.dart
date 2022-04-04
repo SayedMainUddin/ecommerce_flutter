@@ -28,7 +28,7 @@ class _LogoPageState extends State<LogoPage> {
   Widget build(BuildContext context) {
 return Scaffold(
   body: Container(
-      color:Colors.teal,
+      color:Color(0xF80687F6),
       child:Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,

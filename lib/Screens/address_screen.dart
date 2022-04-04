@@ -20,7 +20,7 @@ class _AddressPageState extends State<AddressPage> {
             Container(
               padding: EdgeInsets.only(top: 20),
               height: MediaQuery.of(context).size.height*0.10,
-              color: Color(0xFF19818E),
+              color: Color(0xF80687F6),
               child: Column(
                 children: [
                   Row(
@@ -163,7 +163,7 @@ class _AddressPageState extends State<AddressPage> {
            child: Text("Save",style: TextStyle(fontSize: 22)),
            onPressed: _saveAddress,
            style: ElevatedButton.styleFrom(
-             primary: Color(0xFF19818E),
+             primary: Color(0xF80687F6),
              onPrimary: Colors.white,
              shape: RoundedRectangleBorder(
                borderRadius: BorderRadius.circular(32.0),

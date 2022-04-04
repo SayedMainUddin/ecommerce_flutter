@@ -1,5 +1,6 @@
 import 'package:ecommerce_flutter/LocalStorage.dart';
 import 'package:ecommerce_flutter/Screens/wish_list.dart';
+import 'package:ecommerce_flutter/Welcome/logo_screen.dart';
 import 'package:ecommerce_flutter/cart/cart_in_memory_repository.dart';
 import 'package:ecommerce_flutter/cart/myCart.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                   child: Container(
                     padding: EdgeInsets.fromLTRB(20, 60, 0, 0),
                     height: MediaQuery.of(context).size.height * 0.15,
-                    color: Color(0xFF19818E),
+                    color: Color(0xF80687F6),
                     child: Column(
                       children: [
                         Row(
@@ -79,7 +80,7 @@ class _UserProfilePage extends State<UserProfilePage> {
               body: Stack(
                 children: [
                   Container(
-                      color: Color(0xFF19818E),
+                      color: Color(0xF80687F6),
                       height: MediaQuery.of(context).size.height*.30,
                       child: Padding(
                         padding:EdgeInsets.fromLTRB(20, 10, 20, 20),
@@ -94,7 +95,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                                     width: MediaQuery.of(context).size.height*0.10,
 
                                     decoration: BoxDecoration(
-                                        color: Color(0xFF19818E),
+                                        color: Color(0xF80687F6),
                                         shape: BoxShape.circle,
                                         border: Border.all(
                                             color: Colors.white
@@ -195,12 +196,16 @@ class _UserProfilePage extends State<UserProfilePage> {
 
                               ),
                               Divider(height: 2,),
-                              Container(
-                                height: MediaQuery.of(context).size.height*.05,
-                                width: double.infinity,
-                                child: Text('Logout',style: TextStyle(fontSize: 22,color: Colors.teal,fontWeight: FontWeight.w700),) ,
+                             InkWell(onTap: (){
+                               Navigator.push(context,MaterialPageRoute(builder: (_)=>LogoPage()));
+                             },
+                               child:  Container(
+                                 height: MediaQuery.of(context).size.height*.05,
+                                 width: double.infinity,
+                                 child: Text('Logout',style: TextStyle(fontSize: 22,color: Color(0xF80687F6),fontWeight: FontWeight.w700),) ,
 
-                              ),
+                               ),
+                             ),
                               Divider(height: 2,)
 
                             ],

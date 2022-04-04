@@ -1,7 +1,7 @@
 import 'package:ecommerce_flutter/Models/store_model.dart';
 import 'package:ecommerce_flutter/Profile/searchItembyStore.dart';
 import 'package:ecommerce_flutter/cart/cart_in_memory_repository.dart';
-import 'package:ecommerce_flutter/product_detail.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
@@ -28,7 +28,7 @@ class _StoreProfilePage extends State<StoreProfilePage> {
                 child: Container(
                   padding: EdgeInsets.fromLTRB(20, 60, 0, 0),
                   height: MediaQuery.of(context).size.height * 0.15,
-                  color: Color(0xFF19818E),
+                  color: Color(0xF80687F6),
                   child: Column(
                     children: [
                       Row(
@@ -81,7 +81,7 @@ mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     width: MediaQuery.of(context).size.height*0.10,
 
                                     decoration: BoxDecoration(
-                                        color: Color(0xFF19818E),
+                                        color: Color(0xF80687F6),
                                         shape: BoxShape.circle,
                                         border: Border.all(
                                             color: Colors.black
@@ -128,7 +128,7 @@ mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                                   } ,
                                   style: ElevatedButton.styleFrom(
-                                    primary: isFollow==true?Color(0xFF19818E):Colors.black12,
+                                    primary: isFollow==true?Color(0xF80687F6):Colors.black12,
                                     onPrimary: Colors.white,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(32.0),
@@ -162,7 +162,7 @@ mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     ),
                                     style: ButtonStyle(
                                         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                                        backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                                        backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                             RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.circular(18.0),
@@ -187,7 +187,7 @@ mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     ),
                                     style: ButtonStyle(
                                         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                                        backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                                        backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                             RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.circular(18.0),
@@ -388,7 +388,7 @@ mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 width: 40,
 
                                                 decoration: BoxDecoration(
-                                                    color: Color(0xFF19818E),
+                                                    color: Color(0xF80687F6),
                                                     shape: BoxShape.circle,
                                                     border: Border.all()
                                                 ),
@@ -408,7 +408,7 @@ mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           ),
                                           Text('\$200',
                                               style: TextStyle(
-                                                  color: Color(0xFF19818E),
+                                                  color: Color(0xF80687F6),
                                                   fontWeight:
                                                   FontWeight.w900,
                                                   fontSize: 20)),

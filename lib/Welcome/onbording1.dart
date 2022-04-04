@@ -35,9 +35,9 @@ int boarding=1;
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     colors: [
-                      Color(0xFF19818E),
-                      Color(0xFF19818E),
-                      Color(0xFF19818E),
+                      Color(0xF80687F6),
+                      Color(0xF80687F6),
+                      Color(0xF80687F6),
 
                     ]
                 )
@@ -54,7 +54,7 @@ int boarding=1;
 
                       Container(
                         decoration: BoxDecoration(
-                            color: Color(0xFF19818E),
+                            color: Color(0xF80687F6),
                             borderRadius: BorderRadius.circular(10),
                             boxShadow: [BoxShadow(
                                 color: Color.fromRGBO(
@@ -124,19 +124,19 @@ int boarding=1;
                             Text('Empowering Artisans, \n Farmers & Micro Business',
                               style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.teal
+                                color: Color(0xF80687F6)
                               ),
                               textAlign: TextAlign.center,
                             ):  boarding==2?  Text('Connecting NGOs, Social \n Enterprises With Communities',
                               style: TextStyle(
                                   fontSize: 16,
-                                  color: Colors.teal
+                                  color: Color(0xF80687F6)
                               ),
                               textAlign: TextAlign.center,
                             ): Text('Donate, Invest & Support \n Infrastructure projects',
                               style: TextStyle(
                                   fontSize: 16,
-                                  color: Colors.teal
+                                  color: Color(0xF80687F6)
                               ),
                               textAlign: TextAlign.center,
                             ),

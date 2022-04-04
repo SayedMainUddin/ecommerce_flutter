@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-     // home: LogoPage(),
-      home: HomePage(),
+      home: LogoPage(),
+     // home: HomePage(),
     );
   }
 }

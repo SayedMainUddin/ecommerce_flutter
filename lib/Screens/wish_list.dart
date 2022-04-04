@@ -1,6 +1,5 @@
 import 'package:ecommerce_flutter/Home/home.dart';
 import 'package:ecommerce_flutter/cart/cart_in_memory_repository.dart';
-import 'package:ecommerce_flutter/product_detail.dart';
 import 'package:ecommerce_flutter/utils/favourite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/utils/group_list_view.dart';
@@ -28,7 +27,7 @@ class _WishListPage extends State<WishListPage> {
             Container(
               padding: EdgeInsets.only(top: 40),
              // height: MediaQuery.of(context).size.height*0.20,
-              color: Color(0xFF19818E),
+              color: Color(0xF80687F6),
               child: Column(
                 children: [
                   Row(
@@ -147,7 +146,7 @@ class _WishListPage extends State<WishListPage> {
                                         width: 40,
 
                                         decoration: BoxDecoration(
-                                            color: Color(0xFF19818E),
+                                            color: Color(0xF80687F6),
                                             shape: BoxShape.circle,
                                             border: Border.all()
                                         ),
@@ -167,7 +166,7 @@ class _WishListPage extends State<WishListPage> {
                                   ),
                                   Text('\$200',
                                       style: TextStyle(
-                                          color: Color(0xFF19818E),
+                                          color: Color(0xF80687F6),
                                           fontWeight:
                                           FontWeight.w900,
                                           fontSize: 20)),

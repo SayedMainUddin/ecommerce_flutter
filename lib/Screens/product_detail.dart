@@ -71,7 +71,7 @@ var productName='Beautiful Product';
     final imageUrl;
     return Scaffold(
      /*   appBar: AppBar(
-          backgroundColor: Color(0xFF19818E),
+          backgroundColor: Color(0xF80687F6),
           title: Text('Product Detail'),
         ),*/
         body:Padding(
@@ -230,7 +230,7 @@ var productName='Beautiful Product';
                                   width: MediaQuery.of(context).size.height*0.05,
 
                                   decoration: BoxDecoration(
-                                      color: Color(0xFF19818E),
+                                      color: Color(0xF80687F6),
                                       shape: BoxShape.circle,
                                       border: Border.all()
                                   ),
@@ -256,7 +256,7 @@ var productName='Beautiful Product';
                                 child: Text("Follow"),
                                 onPressed: _followButton,
                                 style: ElevatedButton.styleFrom(
-                                  primary: Color(0xFF19818E),
+                                  primary: Color(0xF80687F6),
                                   onPrimary: Colors.white,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(32.0),
@@ -414,7 +414,7 @@ var productName='Beautiful Product';
             child: Text("Add To Cart"),
             onPressed: _addToCart,
             style: ElevatedButton.styleFrom(
-              primary: Color(0xFF19818E),
+              primary: Color(0xF80687F6),
               onPrimary: Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(32.0),

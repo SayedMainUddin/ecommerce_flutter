@@ -56,7 +56,7 @@ class MySampleState extends State<HomePagePayment> {
                       .of(context)
                       .size
                       .height * 0.12,
-                  color: Color(0xFF19818E),
+                  color: Color(0xF80687F6),
                   child: Column(
                     children: [
                       Row(

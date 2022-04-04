@@ -10,14 +10,14 @@ import 'package:ecommerce_flutter/Screens/wish_list.dart';
 import 'package:ecommerce_flutter/Store/AddProduct.dart';
 import 'package:ecommerce_flutter/Store/edit_product.dart';
 import 'package:ecommerce_flutter/TabPage.dart';
-import 'package:ecommerce_flutter/allCategory.dart';
+
 import 'package:ecommerce_flutter/cart/cart_in_memory_repository.dart';
 import 'package:ecommerce_flutter/cart/myCart.dart';
-import 'package:ecommerce_flutter/product_detail.dart';
+
 import 'package:ecommerce_flutter/utils/bottomNavBarDesign.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce_flutter/categorise.dart';
+
 import 'dart:ui';
 import 'package:ecommerce_flutter/utils/favourite_button.dart';
 import 'package:flutter/rendering.dart';
@@ -43,7 +43,7 @@ class _HomeState extends State<CreateStorePage> {
               Container(
                 padding: EdgeInsets.fromLTRB(20, 50, 0, 0),
                 height: MediaQuery.of(context).size.height * 0.15,
-                color: Color(0xFF19818E),
+                color: Color(0xF80687F6),
                 child: Column(
                   children: [
                     Row(
@@ -150,7 +150,7 @@ class _HomeState extends State<CreateStorePage> {
                       Text("Create Store", style: TextStyle(fontSize: 22)),
                       onPressed: _createStore,
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF19818E),
+                        primary: Color(0xF80687F6),
                         onPrimary: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32.0),
@@ -190,7 +190,7 @@ class _CreateStoreState extends State<CreateStore> {
             Container(
               padding: EdgeInsets.fromLTRB(20, 50, 0, 0),
               height: MediaQuery.of(context).size.height * 0.15,
-              color: Color(0xFF19818E),
+              color: Color(0xF80687F6),
               child: Column(
                 children: [
                   Row(
@@ -335,7 +335,7 @@ class _CreateStoreState extends State<CreateStore> {
           child: Text("Create", style: TextStyle(fontSize: 22)),
           onPressed: _create,
           style: ElevatedButton.styleFrom(
-            primary: Color(0xFF19818E),
+            primary: Color(0xF80687F6),
             onPrimary: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(32.0),
@@ -467,7 +467,7 @@ class _StorePageState extends State<ProductPage> {
                                                 width: MediaQuery.of(context).size.height*0.03,
 
                                                 decoration: BoxDecoration(
-                                                    color: Color(0xFF19818E),
+                                                    color: Color(0xF80687F6),
                                                     shape: BoxShape.circle,
                                                     border: Border.all()
                                                 ),
@@ -488,7 +488,7 @@ class _StorePageState extends State<ProductPage> {
                                           ),
                                           Text('\$200',
                                               style: TextStyle(
-                                                  color: Color(0xFF19818E),
+                                                  color: Color(0xF80687F6),
                                                   fontWeight:
                                                   FontWeight.w900,
                                                   fontSize: 20)),
@@ -609,10 +609,10 @@ class _StorePageState extends State<ProductPage> {
                 ),
                 Container(
                   height: MediaQuery.of(context).size.height / 5,
-                  color: Color(0xFF19818E),
+                  color: Color(0xF80687F6),
                 ),
                 /*    Container(
-                     color: Color(0xFF19818E),
+                     color: Color(0xF80687F6),
                    ),*/
 
                 Padding(
@@ -672,7 +672,7 @@ class _StorePageState extends State<ProductPage> {
                                                     Colors.white),
                                                 backgroundColor:
                                                 MaterialStateProperty.all<Color>(
-                                                    Color(0xFF19818E)),
+                                                    Color(0xF80687F6)),
                                                 shape: MaterialStateProperty.all<
                                                     RoundedRectangleBorder>(
                                                     RoundedRectangleBorder(
@@ -699,7 +699,7 @@ class _StorePageState extends State<ProductPage> {
                                                     Colors.white),
                                                 backgroundColor:
                                                 MaterialStateProperty.all<Color>(
-                                                    Color(0xFF19818E)),
+                                                    Color(0xF80687F6)),
                                                 shape: MaterialStateProperty.all<
                                                     RoundedRectangleBorder>(
                                                     RoundedRectangleBorder(
@@ -726,7 +726,7 @@ class _StorePageState extends State<ProductPage> {
                                                     Colors.white),
                                                 backgroundColor:
                                                 MaterialStateProperty.all<Color>(
-                                                    Color(0xFF19818E)),
+                                                    Color(0xF80687F6)),
                                                 shape: MaterialStateProperty.all<
                                                     RoundedRectangleBorder>(
                                                     RoundedRectangleBorder(
@@ -813,7 +813,7 @@ class _StorePageState extends State<ProductPage> {
                     Text("Add Product", style: TextStyle(fontSize: 22)),
                     onPressed: _addProduct,
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFF19818E),
+                      primary: Color(0xF80687F6),
                       onPrimary: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32.0),
@@ -859,7 +859,7 @@ class _StorePageState extends State<ProductPage> {
                                 ),
                                 prefixIcon: Icon(
                                   Icons.search,
-                                  color: Color(0xFF19818E),
+                                  color: Color(0xF80687F6),
                                 ),
                                 filled: true,
                                 contentPadding: EdgeInsets.only(

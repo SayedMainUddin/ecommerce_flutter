@@ -26,7 +26,7 @@ class _CartPageState extends State<OrderHistoryPage> {
     child: Container(
       padding: EdgeInsets.fromLTRB(20, 60, 0, 0),
       height: MediaQuery.of(context).size.height * 0.15,
-      color: Color(0xFF19818E),
+      color: Color(0xF80687F6),
       child: Column(
         children: [
           Row(

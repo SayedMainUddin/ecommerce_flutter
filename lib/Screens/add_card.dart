@@ -89,7 +89,7 @@ class _AddCardPage extends State<AddCardPage> {
                       .of(context)
                       .size
                       .height * 0.10,
-                  color: Color(0xFF19818E),
+                  color: Color(0xF80687F6),
                   child: Column(
                     children: [
                       Row(
@@ -235,7 +235,7 @@ Divider(),
           child: Text("Add Credit Card",style: TextStyle(fontSize: 22)),
           onPressed: _checkout,
           style: ElevatedButton.styleFrom(
-            primary: Color(0xFF19818E),
+            primary: Color(0xF80687F6),
             onPrimary: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(32.0),

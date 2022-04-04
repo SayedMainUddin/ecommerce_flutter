@@ -14,6 +14,33 @@ class _StorePageState extends State<StorePage> {
   final double circleRadius = 120.0;
   bool isFollowed=false;
   var isDownloaded=false;
+  List<Store> stores = [
+    Store(id:1,imageUrl:    "assets/Twilio-SMS-Bot.jpg",name: "Alchemy Software Limited",totalProducts: 20,totalFollowers: 3000,location: 'Chittagong',category: 'IT',isFollow: true),
+    Store(id:1,imageUrl:    "assets/programingName/chat-app.jpg",name: "Alchemy Software Limited",totalProducts: 20,totalFollowers: 3000,location: 'Chittagong',category: 'IT',isFollow: true),
+    Store(id:1,imageUrl:    "assets/programingName/csharp.jpg",name: "Alchemy Software Limited",totalProducts: 20,totalFollowers: 3000,location: 'Chittagong',category: 'IT',isFollow: true),
+    Store(id:1,imageUrl:    "assets/programingName/flutter.png",name: "Alchemy Software Limited",totalProducts: 20,totalFollowers: 3000,location: 'Chittagong',category: 'IT',isFollow: true),
+    Store(id:1,imageUrl:    "assets/programingName/javascript.jpg",name: "Alchemy Software Limited",totalProducts: 20,totalFollowers: 3000,location: 'Chittagong',category: 'IT',isFollow: true),
+    /* Category(id:2,imageUrl:  "assets/programingName/chat-app.jpg",  select: true,name: "Kenec",),
+    Category(id:3,imageUrl:  "assets/programingName/csharp.jpg",    select: true,name: "Testi",),
+    Category(id:4,imageUrl:  "assets/programingName/excel.jpg",     select: true,name: "Testi",),
+    Category(id:5,imageUrl:  "assets/programingName/flutter.png",   select: true,name: "Bilai",),
+    Category(id:6,imageUrl:  "assets/programingName/flutterapp.png",select: true,name: "Helpe",),
+    Category(id:7,imageUrl:  "assets/programingName/html.jpg",      select: true,name: "Teste",),
+    Category(id:8,imageUrl:  "assets/programingName/java.jpg",      select: true,name: "Teste",),
+    Category(id:9,imageUrl:  "assets/programingName/javascript.jpg",select: true,name: "Teste",),
+    Category(id:10,imageUrl: "assets/programingName/machine.png",   select: true,name: "Teste",),
+    Category(id:11,imageUrl: "assets/programingName/mongodb.png",   select: true,name: "Teste",),
+    Category(id:12,imageUrl: "assets/programingName/nodejs.png",    select: true,name: "Teste",),
+    Category(id:13,imageUrl: "assets/programingName/php.jpg",       select: true,name: "Teste",),
+    Category(id:14,imageUrl: "assets/programingName/posSystem.jpg", select: true,name: "Teste",),
+    Category(id:15,imageUrl: "assets/programingName/pythonlogo.png",select: true,name: "Teste",),
+    Category(id:16,imageUrl: "assets/programingName/reactjs.png",   select: true,name: "Teste",),
+
+    Category(id:17,imageUrl: "assets/images/allCategories/beverage1.jpeg",select: true,name: "Beverage ",),
+    Category(id:18,imageUrl: "assets/images/allCategories/seloon.jpg",select: true,name: "Seloon",),
+    Category(id:19,imageUrl: "assets/images/allCategories/shoes_6.png",select: true,name: "Shoes",),
+    Category(id:20,imageUrl: "assets/images/allCategories/vagetables.jpg",select: true,name: "Vagetable",),*/
+  ];
   @override
   Widget build(BuildContext context) {
     double h=MediaQuery.of(context).size.height;
@@ -44,10 +71,10 @@ class _StorePageState extends State<StorePage> {
                       Container(
 
                         height: MediaQuery.of(context).size.height / 5,
-                        color: Color(0xFF19818E),
+                        color: Color(0xF80687F6),
                       ),
                       /*    Container(
-                     color: Color(0xFF19818E),
+                     color: Color(0xF80687F6),
                    ),*/
 
                       Padding(
@@ -105,7 +132,7 @@ class _StorePageState extends State<StorePage> {
 
                                                 } ,
                                                 style: ElevatedButton.styleFrom(
-                                                  primary: i.isFollow==true?Color(0xFF19818E):Colors.black12,
+                                                  primary: i.isFollow==true?Color(0xF80687F6):Colors.black12,
                                                   onPrimary: Colors.white,
                                                   shape: RoundedRectangleBorder(
                                                     borderRadius: BorderRadius.circular(32.0),
@@ -139,10 +166,9 @@ class _StorePageState extends State<StorePage> {
 
                               height: h*0.10,
                               width: double.infinity,
-                             // color: Color(0xFF19818E),
+                             // color: Color(0xF80687F6),
                               color:Colors.white,
-                            //  child: Image.asset("assets/Workshop-Banner-11.png",fit: BoxFit.cover,),
-                              child: Image.asset("assets/images/banner-1.png",fit: BoxFit.cover,),
+                              child: Image.asset(i.imageUrl,fit: BoxFit.cover,),
 
                             ),
                             ///Image Avatar
@@ -169,8 +195,7 @@ class _StorePageState extends State<StorePage> {
                                       decoration: BoxDecoration(
                                      //   color: const Color(0xff7c94b6),
                                         image: DecorationImage(
-                                          //  image: AssetImage('assets/asl.png'),
-                                            image: AssetImage('assets/images/ic_user_profile.png'),
+                                          image: AssetImage(i.imageUrl),
                                           fit: BoxFit.cover,
                                         ),
                                         borderRadius: BorderRadius.all( Radius.circular(60.0)),

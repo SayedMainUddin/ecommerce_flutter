@@ -34,7 +34,7 @@ class _MyCartPageState extends State<MyCartPage> {
                 Container(
                   padding: EdgeInsets.only(top: 20),
                   height: MediaQuery.of(context).size.height * 0.10,
-                  color: Color(0xFF19818E),
+                  color: Color(0xF80687F6),
                   child: Column(
                     children: [
                       Row(
@@ -144,7 +144,7 @@ class _MyCartPageState extends State<MyCartPage> {
                          Navigator.push(context, MaterialPageRoute(builder: (_)=>HomePage(pageIndex: 0,)));
                        },
                        style: ElevatedButton.styleFrom(
-                         primary: Color(0xFF19818E),
+                         primary: Color(0xF80687F6),
                          onPrimary: Colors.white,
                          shape: RoundedRectangleBorder(
                            borderRadius: BorderRadius.circular(32.0),
@@ -196,7 +196,7 @@ class _MyCartPageState extends State<MyCartPage> {
                                           child: Text(
                                             '\$${price * _currentIntValue}',
                                             style: TextStyle(
-                                              color: Colors.teal,
+                                              color:Color(0xF80687F6),
                                               fontSize: 20,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -339,7 +339,7 @@ var _productId=0;
                           style: TextStyle(fontSize: 22)),
                       onPressed: _paymentSubmit,
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF19818E),
+                        primary: Color(0xF80687F6),
                         onPrimary: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32.0),

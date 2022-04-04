@@ -84,9 +84,9 @@ class _PageState extends State<OTPPage> {
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     colors: [
-                      Color(0xFF19818E),
-                      Color(0xFF19818E),
-                      Color(0xFF19818E),
+                      Color(0xF80687F6),
+                      Color(0xF80687F6),
+                      Color(0xF80687F6),
                     ]
                 )
             ),
@@ -138,7 +138,7 @@ class _PageState extends State<OTPPage> {
                               decoration: BoxDecoration(
                                   border: Border(bottom: BorderSide(
                                       color:
-                                      Colors.teal
+                                      Color(0xF80687F6)
                                   ))
                               ),
                               child: TextField(
@@ -176,7 +176,7 @@ alignment: Alignment.center,
                               color: Colors.white
                           ),
                           child: Center(
-                            child: Text("Next", style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold),),
+                            child: Text("Next", style: TextStyle(color: Color(0xF80687F6), fontWeight: FontWeight.bold),),
                           ),
                         ),
                       )

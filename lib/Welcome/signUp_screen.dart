@@ -85,9 +85,9 @@ class _SignUpPage extends State<SignUpPage> {
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       colors: [
-                        Color(0xFF19818E),
-                        Color(0xFF19818E),
-                        Color(0xFF19818E),
+                        Color(0xF80687F6),
+                        Color(0xF80687F6),
+                        Color(0xF80687F6),
                       ]
                   )
               ),
@@ -121,7 +121,7 @@ class _SignUpPage extends State<SignUpPage> {
                         SizedBox(height: 10,),
                         Container(
                           decoration: BoxDecoration(
-                              color:  Color(0xFF19818E),
+                              color:  Color(0xF80687F6),
                               borderRadius: BorderRadius.circular(10),
                               boxShadow: [BoxShadow(
                                   color:  Color(0xFF1396A7),
@@ -136,7 +136,7 @@ class _SignUpPage extends State<SignUpPage> {
                                 decoration: BoxDecoration(
                                     border: Border(bottom: BorderSide(
                                         color:
-                                        Colors.teal
+                                        Color(0xF80687F6)
                                     ))
                                 ),
                                 child: TextField(
@@ -152,7 +152,7 @@ class _SignUpPage extends State<SignUpPage> {
                                 decoration: BoxDecoration(
                                     border: Border(bottom: BorderSide(
                                         color:
-                                        Colors.teal
+                                        Color(0xF80687F6)
                                     ))
                                 ),
                                 child: TextField(
@@ -168,7 +168,7 @@ class _SignUpPage extends State<SignUpPage> {
                                 decoration: BoxDecoration(
                                     border: Border(bottom: BorderSide(
                                         color:
-                                        Colors.teal
+                                        Color(0xF80687F6)
                                     ))
                                 ),
                                 child: TextField(
@@ -184,7 +184,7 @@ class _SignUpPage extends State<SignUpPage> {
                                 decoration: BoxDecoration(
                                     border: Border(bottom: BorderSide(
                                         color:
-                                        Colors.teal
+                                        Color(0xF80687F6)
                                     ))
                                 ),
                                 child: TextField(
@@ -200,7 +200,7 @@ class _SignUpPage extends State<SignUpPage> {
                                 decoration: BoxDecoration(
                                     border: Border(bottom: BorderSide(
                                         color:
-                                        Colors.teal
+                                        Color(0xF80687F6)
                                     ))
                                 ),
                                 child: TextField(
@@ -247,7 +247,7 @@ class _SignUpPage extends State<SignUpPage> {
                             ),
                             child: Center(
                               child: Text("Create",
-                                style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold,fontSize: 20),),
+                                style: TextStyle(color: Color(0xF80687F6), fontWeight: FontWeight.bold,fontSize: 20),),
                             ),
                           ),
                         )
@@ -297,7 +297,7 @@ class _SignUpPage extends State<SignUpPage> {
                 onTap: ()=>_signUp(),
                 child: Text('SignIn',   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.teal,
+                    color: Color(0xF80687F6),
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.bold
                 ),),

@@ -110,7 +110,7 @@ class _PaymentPage extends State<PaymentPage> {
                       .of(context)
                       .size
                       .height * 0.10,
-                  color: Color(0xFF19818E),
+                  color: Color(0xF80687F6),
                   child: Column(
                     children: [
                       Row(
@@ -273,7 +273,7 @@ class _PaymentPage extends State<PaymentPage> {
                           value: 1,
                           groupValue: debitOrCredit,
                           onChanged: _selectDebitOrCreditCard,
-                      activeColor: Colors.teal,
+                      activeColor: Color(0xF80687F6),
                       ),
 
                       Text('Debit/Credit Card', style: TextStyle(
@@ -377,7 +377,7 @@ class _PaymentPage extends State<PaymentPage> {
                         "Change", style: TextStyle(fontSize: 13)),
                     onPressed: _paymentSubmit,
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFF19818E),
+                      primary: Color(0xF80687F6),
                       onPrimary: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -429,7 +429,7 @@ class _PaymentPage extends State<PaymentPage> {
           child: Text("Checkout",style: TextStyle(fontSize: 22)),
           onPressed: widget.isValid=='valid'?_checkout:_noData,
           style: ElevatedButton.styleFrom(
-            primary: widget.isValid=='valid'?Color(0xFF19818E):Color(0xFF719499),
+            primary: widget.isValid=='valid'?Color(0xF80687F6):Color(0xFF719499),
             onPrimary: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(32.0),

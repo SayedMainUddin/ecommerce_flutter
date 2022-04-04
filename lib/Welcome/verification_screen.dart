@@ -84,9 +84,9 @@ class _PageState extends State<VerificationPage> {
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     colors: [
-                      Color(0xFF19818E),
-                      Color(0xFF19818E),
-                      Color(0xFF19818E),
+                      Color(0xF80687F6),
+                      Color(0xF80687F6),
+                      Color(0xF80687F6),
                     ]
                 )
             ),
@@ -138,7 +138,7 @@ class _PageState extends State<VerificationPage> {
                               decoration: BoxDecoration(
                                   border: Border(bottom: BorderSide(
                                       color:
-                                      Colors.teal
+                                      Color(0xF80687F6)
                                   ))
                               ),
                               child: TextField(

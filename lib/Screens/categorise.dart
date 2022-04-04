@@ -1,6 +1,6 @@
 
 import 'package:ecommerce_flutter/Models/category_model.dart';
-import 'package:ecommerce_flutter/allCategory.dart';
+import 'package:ecommerce_flutter/Screens/favourites_items.dart';
 import 'package:flutter/material.dart';
 
 
@@ -52,7 +52,7 @@ class _CategoriseState extends State<Categorise> {
         preferredSize:  Size(MediaQuery
             .of(context).size.width, height + 100),
         child: Container(
-          color: Color(0xFF19818E),
+          color: Color(0xF80687F6),
           padding:EdgeInsets.fromLTRB(10, 50, 10, 10) ,
           child: Stack(
             children: <Widget>[
@@ -64,7 +64,7 @@ class _CategoriseState extends State<Categorise> {
                 padding: EdgeInsets.fromLTRB( 10,5,5,14),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(0.0),
-                  color: Color(0xFF19818E),
+                  color: Color(0xF80687F6),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey,
@@ -114,7 +114,7 @@ class _CategoriseState extends State<Categorise> {
 
                     Container(
 
-                      color:Color(0xFF19818E),
+                      color:Color(0xF80687F6),
                       padding:EdgeInsets.only(left: 0,right: 0,top: 20,bottom: 1) ,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -134,7 +134,7 @@ class _CategoriseState extends State<Categorise> {
                               ),
                               style: ButtonStyle(
                                   foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(18.0),
@@ -159,7 +159,7 @@ class _CategoriseState extends State<Categorise> {
                               ),
                               style: ButtonStyle(
                                   foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(18.0),
@@ -184,7 +184,7 @@ class _CategoriseState extends State<Categorise> {
                               ),
                               style: ButtonStyle(
                                   foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(18.0),

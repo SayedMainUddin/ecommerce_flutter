@@ -1,5 +1,6 @@
+
 import 'package:ecommerce_flutter/Models/category_model.dart';
-import 'package:ecommerce_flutter/product_detail.dart';
+import 'package:ecommerce_flutter/Screens/product_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/utils/group_list_view.dart';
 import 'package:ecommerce_flutter/utils/app_color.dart';
@@ -36,10 +37,10 @@ class _AllFavouriteCategoryState extends State<AllFavouriteCategory> {
     Category(id:15,imageUrl: "assets/programingName/pythonlogo.png",select: true,name: "pythonlogo",),
     Category(id:16,imageUrl: "assets/programingName/reactjs.png",   select: true,name: "reactjs",),
 
-    Category(id:17,imageUrl: "assets/images/allCategories/beverage1.jpeg",select: true,name: "Beverage ",),
-    Category(id:18,imageUrl: "assets/images/allCategories/seloon.jpg",select: true,name: "Seloon",),
-    Category(id:19,imageUrl: "assets/images/allCategories/shoes_6.png",select: true,name: "Shoes",),
-    Category(id:20,imageUrl: "assets/images/allCategories/vagetables.jpg",select: true,name: "Vagetable",),
+    Category(id:17,imageUrl: "assets/images/allCategories/beverage1.jpeg",  select: true,name: "Beverage ",),
+    Category(id:18,imageUrl: "assets/images/allCategories/seloon.jpg",      select: true,name: "Seloon",),
+    Category(id:19,imageUrl: "assets/images/allCategories/shoes_6.png",     select: true,name: "Shoes",),
+    Category(id:20,imageUrl: "assets/images/allCategories/vagetables.jpg",  select: true,name: "Vagetable",),
   ];
   _appBar(height) => PreferredSize(
     preferredSize:  Size(MediaQuery.of(context).size.width, height+60 ),
@@ -79,12 +80,12 @@ class _AllFavouriteCategoryState extends State<AllFavouriteCategory> {
                   Container()
                 ],
               ),
-              color:Color(0xFF19818E),
+              color:Color(0xF80687F6),
               height: height+40,
               width: MediaQuery.of(context).size.width,
             ),
             Container(
-              color:Color(0xFF19818E),
+              color:Color(0xF80687F6),
               padding:EdgeInsets.only(left: 10,right: 10,top: 1,bottom: 1) ,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,7 +105,7 @@ class _AllFavouriteCategoryState extends State<AllFavouriteCategory> {
                       ),
                       style: ButtonStyle(
                           foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18.0),
@@ -129,7 +130,7 @@ class _AllFavouriteCategoryState extends State<AllFavouriteCategory> {
                       ),
                       style: ButtonStyle(
                           foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18.0),
@@ -154,7 +155,7 @@ class _AllFavouriteCategoryState extends State<AllFavouriteCategory> {
                       ),
                       style: ButtonStyle(
                           foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18.0),
@@ -220,17 +221,18 @@ class _AllFavouriteCategoryState extends State<AllFavouriteCategory> {
                             ),
                           ),
                           Container(
-                            height: 20,
+                              height: 20,
                               width: 200,
                               alignment: Alignment.center,
-                              color:Colors.red,
+                              color:Colors.blue.shade700,
                               child: Text(
                                 categories[index].name,
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 17.0),overflow: TextOverflow.ellipsis,
-                              )),
+                              )
+                          ),
                         ],
                       ),
                     ),
@@ -292,7 +294,7 @@ class AllContact extends StatefulWidget{
 }
 
 class _AllContact extends State<AllContact>{
- 
+
 
   @override
   void initState() {
@@ -373,7 +375,7 @@ class _AllContact extends State<AllContact>{
 
         body: Stack(
           children: [
-         
+
             Align(
               alignment: Alignment.topCenter,
               child: Column(
@@ -387,7 +389,7 @@ class _AllContact extends State<AllContact>{
                             'New Contact',
                             Icons.person_add_alt_1_rounded,
                                 (){
-                         
+
                               print('clicked New Contact');
                             }
                         ),
@@ -396,7 +398,7 @@ class _AllContact extends State<AllContact>{
                             Icons.pending_actions_outlined,
                                 (){
                               print('clicked Pending Contact');
-                       
+
                             }
                         ),
                         Container(
@@ -432,7 +434,7 @@ class _AllContact extends State<AllContact>{
           ],
         ),
       ), onWillPop: () async {
-    return true;
+        return true;
       });
 
   }

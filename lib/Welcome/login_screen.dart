@@ -83,9 +83,9 @@ class _LoginPageState extends State<LoginPage> {
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     colors: [
-                      Color(0xFF19818E),
-                      Color(0xFF19818E),
-                      Color(0xFF19818E),
+                      Color(0xF80687F6),
+                      Color(0xF80687F6),
+                      Color(0xF80687F6),
                     ]
                 )
             ),
@@ -104,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(height: 10,),
                       Container(
                         decoration: BoxDecoration(
-                            color:  Color(0xFF19818E),
+                            color:  Color(0xF80687F6),
                             borderRadius: BorderRadius.circular(10),
                             boxShadow: [BoxShadow(
                                 color:  Color(0xFF1396A7),
@@ -119,7 +119,7 @@ class _LoginPageState extends State<LoginPage> {
                               decoration: BoxDecoration(
                                   border: Border(bottom: BorderSide(
                                       color:
-                                      Colors.teal
+                                      Color(0xF80687F6)
                                   ))
                               ),
                               child: TextField(
@@ -163,7 +163,7 @@ class _LoginPageState extends State<LoginPage> {
                               color: Colors.white
                           ),
                           child: Center(
-                            child: Text("LOGIN", style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold),),
+                            child: Text("LOGIN", style: TextStyle(color: Color(0xF80687F6), fontWeight: FontWeight.bold),),
                           ),
                         ),
                       )
@@ -212,7 +212,7 @@ class _LoginPageState extends State<LoginPage> {
                 onTap: ()=>_signUp(),
                 child: Text('Sign Up',   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.teal,
+                    color: Color(0xF80687F6),
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.bold
                 ),),

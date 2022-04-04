@@ -1,8 +1,13 @@
 import 'package:ecommerce_flutter/LocalStorage.dart';
+import 'package:ecommerce_flutter/Models/category_model.dart';
+import 'package:ecommerce_flutter/Models/product.dart';
+import 'package:ecommerce_flutter/Models/store_model.dart';
+import 'package:ecommerce_flutter/Screens/product_detail.dart';
+import 'package:ecommerce_flutter/Store/AddProduct.dart';
 import 'package:ecommerce_flutter/cart/cart_in_memory_repository.dart';
 import 'package:ecommerce_flutter/cart/myCart.dart';
-import 'package:ecommerce_flutter/product_detail.dart';
 import 'package:ecommerce_flutter/utils/favourite_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/utils/group_list_view.dart';
 import 'package:ecommerce_flutter/utils/app_color.dart';
@@ -29,7 +34,7 @@ class _BrowsPage extends State<BrowsPage> {
             Container(
               padding: EdgeInsets.only(top: 40),
               height: MediaQuery.of(context).size.height*.30,
-              color: Color(0xFF19818E),
+              color: Color(0xF80687F6),
               child: Column(
                 children: [
                   Row(
@@ -102,7 +107,7 @@ class _BrowsPage extends State<BrowsPage> {
                                       width: 1.0,
                                     ),
                                   ),
-                                  prefixIcon: Icon(Icons.search,color: Color(0xFF19818E),),
+                                  prefixIcon: Icon(Icons.search,color: Color(0xF80687F6),),
                                   filled: true,
                                   contentPadding: EdgeInsets.only(
                                     left: 15.0,
@@ -118,7 +123,7 @@ class _BrowsPage extends State<BrowsPage> {
                     ),
                   ),
                   Container(
-                    color:Color(0xFF19818E),
+                    color:Color(0xF80687F6),
                     padding:EdgeInsets.only(left: 10,right: 10,top: 1,bottom: 1) ,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -138,7 +143,7 @@ class _BrowsPage extends State<BrowsPage> {
                             ),
                             style: ButtonStyle(
                                 foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(18.0),
@@ -163,7 +168,7 @@ class _BrowsPage extends State<BrowsPage> {
                             ),
                             style: ButtonStyle(
                                 foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(18.0),
@@ -188,7 +193,7 @@ class _BrowsPage extends State<BrowsPage> {
                             ),
                             style: ButtonStyle(
                                 foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF19818E)),
+                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xF80687F6)),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(18.0),
@@ -222,64 +227,79 @@ class _BrowsPage extends State<BrowsPage> {
       home: Scaffold(
         appBar: _appBar(AppBar().preferredSize.height),
         body: SingleChildScrollView(
-          child: Container(
+          child:
+          Container(
 
             child: GridView.count(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               crossAxisCount: 2,
               padding: EdgeInsets.only(top: 2, left: 2, right: 2, bottom: 2),
-              children: List.generate(imgList_chair.length, (index) {
+              children: List.generate(categories.length, (index) {
                 return Container(
-                 padding: EdgeInsets.only(top: 2, left: 2, right: 2, bottom: 2),
+                  alignment: Alignment.center,
+                  width: MediaQuery.of(context).size.width*0.60,
 
                   child: Card(
-
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                      BorderRadius.circular(15.0),
+                    ),
                     clipBehavior: Clip.antiAlias,
-
                     child: InkWell(
                       onTap: () {
-                        print('Card tapped.');
+                        print('Click products');
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (_) => Products(
-                                  imageUrl:imgList_chair[index],
+                                  imageUrl:  categories[index].imageUrl,
                                 )));
                       },
                       child: Column(
                         crossAxisAlignment:
-                        CrossAxisAlignment.center,
+                        CrossAxisAlignment.start,
                         children: <Widget>[
-
+                          Stack(
+                            children: <Widget>[
                               Container(
-                                padding: EdgeInsets.all(12),
-
-                                height: MediaQuery.of(context).size.height*.13,
-                                width:  MediaQuery.of(context).size.width*.20,
+                                height: MediaQuery.of(context).size.height*0.13,
+                                width: MediaQuery.of(context).size.width*0.45,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
-
+                                    //  colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.15), BlendMode.darken),
 
                                       image: AssetImage(
-                                        imgList_chair[index],
+                                        categories[index].imageUrl,
                                       ),
                                       fit: BoxFit.cover),
                                 ),
                               ),
 
 
-
+                            ],
+                          ),
                           ListTile(
-                              title:
-                              Text(
-                                'Fish',
-                                style: TextStyle(fontFamily: 'Montserrat',fontSize: 17,color: Colors.black45,fontWeight: FontWeight.w400),
+                              title: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                      categories[index].name,
+                                      style: TextStyle(fontFamily: 'Montserrat',fontSize: 17,color: Colors.black45,fontWeight: FontWeight.w400,),
+                                      overflow: TextOverflow.ellipsis
+
+                                  ),
+                                  Text('\$${productList[index].price}',
+                                      style: TextStyle(
+                                          color: Color(0xF80687F6),
+                                          fontWeight:
+                                          FontWeight.w900,
+                                          fontSize: 14),
+                                      overflow: TextOverflow.ellipsis),
+                                ],
                               ),
-                              /*  Text(
-                                                'One chair',
-                                                style: TextStyle(fontSize: 18,fontFamily: 'bold'),
-                                              ),*/
+
+
                               subtitle: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
@@ -289,39 +309,37 @@ class _BrowsPage extends State<BrowsPage> {
                                         width: 20,
 
                                         decoration: BoxDecoration(
-                                            color: Color(0xFF19818E),
+                                            color: Color(0xF80687F6),
                                             shape: BoxShape.circle,
                                             border: Border.all()
                                         ),
                                         child:Container(
                                           alignment: Alignment.center,
-                                          child:  Text('T',style: TextStyle(
+                                          child:  Text(storeList[index].name.characters.first,style: TextStyle(
                                               fontSize: 15,color: Colors.white,fontWeight: FontWeight.w900
-                                          ),),
+                                          ),
+                                          ),
                                         )
                                     ),
                                       Container(
-                                        child: Text('Tredy',style: TextStyle(
-                                            color: Colors.black26,fontSize: 16,fontWeight: FontWeight.w900
-                                        ),),
+                                        width: MediaQuery.of(context).size.width*0.33,
+                                        child: Text(storeList[index].name,style: TextStyle(
+                                            color: Colors.black26,fontSize: 13,fontWeight: FontWeight.w900
+                                        ),
+                                            overflow: TextOverflow.ellipsis),
                                       )
                                     ],
                                   ),
-                                  Text('\$200',
-                                      style: TextStyle(
-                                          color: Color(0xFF19818E),
-                                          fontWeight:
-                                          FontWeight.w900,
-                                          fontSize: 14)),
+
                                 ],
                               )
                           )
-
                         ],
                       ),
                     ),
                   ),
                 );
+
               }),
             ),
           ),
@@ -331,7 +349,29 @@ class _BrowsPage extends State<BrowsPage> {
 return false;
     });
   }
+  List<Category> categories = [
+    Category(id:1,imageUrl:  "assets/Twilio-Chat-Bot.jpg",          select: true,name: "Bot",),
+    Category(id:2,imageUrl:  "assets/programingName/chat-app.jpg",  select: true,name: "Chat",),
+    Category(id:3,imageUrl:  "assets/programingName/csharp.jpg",    select: true,name: "Csharp",),
+    Category(id:4,imageUrl:  "assets/programingName/excel.jpg",     select: true,name: "excel",),
+    Category(id:5,imageUrl:  "assets/programingName/flutter.png",   select: true,name: "flutter",),
+    Category(id:6,imageUrl:  "assets/programingName/flutterapp.png",select: true,name: "flutterapp",),
+    Category(id:7,imageUrl:  "assets/programingName/html.jpg",      select: true,name: "html",),
+    Category(id:8,imageUrl:  "assets/programingName/java.jpg",      select: true,name: "java",),
+    Category(id:9,imageUrl:  "assets/programingName/javascript.jpg",select: true,name: "javascript",),
+    Category(id:10,imageUrl: "assets/programingName/machine.png",   select: true,name: "machine",),
+    Category(id:11,imageUrl: "assets/programingName/mongodb.png",   select: true,name: "mongodb",),
+    Category(id:12,imageUrl: "assets/programingName/nodejs.png",    select: true,name: "nodejs",),
+    Category(id:13,imageUrl: "assets/programingName/php.jpg",       select: true,name: "php",),
+    Category(id:14,imageUrl: "assets/programingName/posSystem.jpg", select: true,name: "posSystem",),
+    Category(id:15,imageUrl: "assets/programingName/pythonlogo.png",select: true,name: "pythonlogo",),
+    Category(id:16,imageUrl: "assets/programingName/reactjs.png",   select: true,name: "reactjs",),
 
+    Category(id:17,imageUrl: "assets/images/allCategories/beverage1.jpeg",select: true,name: "Beverage ",),
+    Category(id:18,imageUrl: "assets/images/allCategories/seloon.jpg",select: true,name: "Seloon",),
+    Category(id:19,imageUrl: "assets/images/allCategories/shoes_6.png",select: true,name: "Shoes",),
+    Category(id:20,imageUrl: "assets/images/allCategories/vagetables.jpg",select: true,name: "Vagetable",),
+  ];
   final List<String> imgList_chair = [
     "assets/images/ic_chair1.png",
     "assets/images/ic_chair1.png",

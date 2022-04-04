@@ -7,13 +7,13 @@ import 'package:ecommerce_flutter/Models/store_model.dart';
 import 'package:ecommerce_flutter/Screens/brows.dart';
 
 import 'package:ecommerce_flutter/TabPage.dart';
-import 'package:ecommerce_flutter/allCategory.dart';
+
 import 'package:ecommerce_flutter/cart/cart_in_memory_repository.dart';
-import 'package:ecommerce_flutter/product_detail.dart';
+
 import 'package:ecommerce_flutter/utils/bottomNavBarDesign.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce_flutter/categorise.dart';
+
 import 'dart:ui';
 import 'package:ecommerce_flutter/utils/favourite_button.dart';
 import 'package:flutter/rendering.dart';
@@ -234,7 +234,7 @@ class _HomeState extends State<AddProductPage> {
                   .of(context)
                   .size
                   .height * 0.15,
-              color: Color(0xFF19818E),
+              color: Color(0xF80687F6),
               child: Column(
                 children: [
                   Row(
@@ -369,7 +369,7 @@ class _HomeState extends State<AddProductPage> {
           child: Text("Add Product", style: TextStyle(fontSize: 22)),
           onPressed: _addProduct,
           style: ElevatedButton.styleFrom(
-            primary: Color(0xFF19818E),
+            primary: Color(0xF80687F6),
             onPrimary: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(32.0),
@@ -400,33 +400,4 @@ class _HomeState extends State<AddProductPage> {
   }
 
 
-}
-List<Product> productList = [
-  Product(
-    id: 1,
-    name: 'Ready To Deliver To Your Home',
-    Price: '10',
-    select: false,
-  ),
-  Product(
-    id: 2,
-    name: 'Ready To Deliver To Your Home',
-    Price: '10',
-    select: false,
-  ),
-  Product(
-    id: 3,
-    name: 'Ready To Deliver To Your Home',
-    Price: '10',
-    select: false,
-  ),
-];
-
-class Product {
-  int? id;
-  String? name;
-  String? Price;
-  bool? select = false;
-
-  Product({this.name, this.id, this.Price, this.select});
 }

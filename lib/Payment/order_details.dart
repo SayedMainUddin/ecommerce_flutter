@@ -62,7 +62,7 @@ bool isDelivered=false;
       appBar: AppBar(
         centerTitle: true,
         title: Text('Order Details'),
-        backgroundColor: Color(0xFF19818E),
+        backgroundColor: Color(0xF80687F6),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -168,7 +168,7 @@ bool isDelivered=false;
                                     child: Text(
                                       '\$${price * _currentIntValue}',
                                       style: TextStyle(
-                                        color: Colors.teal,
+                                        color: Color(0xF80687F6),
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -458,7 +458,7 @@ bool isDelivered=false;
           Text("Back to Home", style: TextStyle(fontSize: 22)),
           onPressed: _backHome,
           style: ElevatedButton.styleFrom(
-            primary: Color(0xFF19818E),
+            primary: Color(0xF80687F6),
             onPrimary: Colors.white,
 
           ),
