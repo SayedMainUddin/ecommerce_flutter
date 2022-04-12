@@ -1,5 +1,6 @@
 import 'package:ecommerce_flutter/LocalStorage.dart';
 import 'package:ecommerce_flutter/Screens/wish_list.dart';
+import 'package:ecommerce_flutter/Welcome/login_screen.dart';
 import 'package:ecommerce_flutter/Welcome/logo_screen.dart';
 import 'package:ecommerce_flutter/cart/cart_in_memory_repository.dart';
 import 'package:ecommerce_flutter/cart/myCart.dart';
@@ -197,7 +198,7 @@ class _UserProfilePage extends State<UserProfilePage> {
                               ),
                               Divider(height: 2,),
                              InkWell(onTap: (){
-                               Navigator.push(context,MaterialPageRoute(builder: (_)=>LogoPage()));
+                               Navigator.push(context,MaterialPageRoute(builder: (_)=>LoginPage()));
                              },
                                child:  Container(
                                  height: MediaQuery.of(context).size.height*.05,

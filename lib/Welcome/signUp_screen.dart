@@ -2,6 +2,8 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:ecommerce_flutter/Home/home.dart';
+import 'package:ecommerce_flutter/TabPage.dart';
 import 'package:ecommerce_flutter/Welcome/sendOTP_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -15,57 +17,12 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPage extends State<SignUpPage> {
   TextEditingController emailController          = new TextEditingController();
   TextEditingController PasswordController          = new TextEditingController();
-/*  {
-  "username": "sandippatil@gmail.com",
-  "password": "Welcome@99"
-  }*/
-  String pass='Welcome@99';
-  String email='sandippatil@gmail.com';
 
-
-  login(String  pass,email) async {
-
-    Map data = {
-      "username":            email     ,
-      "password":            pass,
-
-    };
-    print(data);
-    HttpClient client = new HttpClient();
-    client.badCertificateCallback =
-    ((X509Certificate cert, String host, int port) => true);
-    var url = await client
-        .postUrl(Uri.parse('https://api.compiquest.com:8443/api/User/user/login'));
-    /*var url =
-    Uri.https('api.compiquest.com:8443', '/api/User/user/register', {'q': '{https}'});*/
-    String body = json.encode(data);
-
-    // Await the http get response, then decode the json-formatted response.
-    var response = await http.post(
-      url.uri,
-      body: body,
-      headers: {
-        "Content-Type": "application/json",
-        "accept": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      },
-    );
-    print(response.body);
-    print(response.statusCode);
-    if (response.statusCode == 200) {
-
-      print('success');
-      //  Navigator.push(context, MaterialPageRoute(builder: (_)=>RegistrationPage()));
-    } else {
-      print('error');
-    }
-
-  }
 
 
   @override
   void initState() {
-    login( emailController.text=email,PasswordController.text=pass);
+
     super.initState();
   }
   @override
@@ -213,26 +170,12 @@ class _SignUpPage extends State<SignUpPage> {
                               ),
 
 
-                              /*         Container(
-                              padding: EdgeInsets.all(10),
-                              decoration: BoxDecoration(
-                                  border: Border(bottom: BorderSide(color: Colors.grey.shade200))
-                              ),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                    hintText: "Password",
-                                    hintStyle: TextStyle(color: Colors.white),
-                                    border: InputBorder.none
-                                ),
-                              ),
-                            ),*/
                             ],
                           ),
                         ),
-                        SizedBox(height: 40,),
 
-                        Text("Forgot Password?",
-                          style: TextStyle(color: Colors.white),),
+
+
                         SizedBox(height: 40,),
                         InkWell(
                           onTap: (){
